@@ -89,12 +89,6 @@ body::-webkit-scrollbar-thumb {
 
 .navbar-link-text {
     display: none;
-    margin: 4vh 2vh;
-    transition: all ease 0.5s;
-}
-
-#last-navbar-icon-text {
-    margin-right: 4vh;
 }
 /* Page Content */
 
