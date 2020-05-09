@@ -1,0 +1,85 @@
+@media (orientation: portrait) {
+    .portraitNavbar {
+        background-color: #252525;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .portraitNavbarButton {
+        display: inline-block;
+        color: mediumseagreen;
+        width: 24%;
+        text-align: center;
+    }
+
+    .portraitNavbarButton a {
+        display: block;
+        margin: 0.5vw;
+        font-size: 4vw;
+        text-decoration: none;
+    }
+
+    .portraitNavbarButton i {
+        font-size: 6vw;
+        margin: 1vw;
+    }
+}
+
+@media (orientation: landscape) {
+    .portraitNavbar {
+        display: none;
+    }
+
+    .portraitNavbarButton {
+        display: none;
+    }
+}
+
+html {
+    background-color: black;
+}
+h1 {
+    display: inline;
+    padding: 0.5vw 1vw 1vw 0.5vw;
+    font-family: 'Roboto', sans-serif;
+    color: mediumseagreen;
+}
+p {
+    font-family: "Roboto", sans-serif;
+    color: mediumseagreen;
+    margin: 0.5vw;
+}
+a {
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    color: mediumseagreen;
+}
+input {
+    float: right;
+    font-family: 'Noto Sans', sans-serif;
+    color: lightgray;
+    border-radius: 0.5vw;
+    margin: 0.5vw 0.5vw 1vw 0.5vw;
+    padding: 0.5vw;
+    border: none;
+    background-color: #252525;
+}
+#textareaDiv {
+    display: block;
+    margin: 0.5vw;
+}
+#wordsToBeCounted {
+    display: block;
+    border: none;
+    resize: vertical;
+    font-family: 'Noto Sans', sans-serif;
+    color: lightgray;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    width: 99%;
+    height: 30vw;
+    background-color: #252525;
+}
