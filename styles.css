@@ -66,14 +66,8 @@ body::-webkit-scrollbar-thumb {
     list-style-type: none;
 }
 
-
-
 .navbar-option {
     height: 100%;
-}
-
-.navbar-option:hover .navbar-link-text {
-    display: inline;
 }
 
 .navbar-link {
