@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Johnny Morrison-Howe/CS student/takes photos/rides bikes">
     <meta name="theme-color" content="#3cb371">
     <link href="styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
     <title>morrisonhowe.com</title>
 </head>
+
 <body onload="runOnLoad()">
     <nav class="navbar">
         <h2 class="navbar-title"><a onclick="scrollToTop()" id="navbar-title-link">Johnny Morrison-Howe</a></h2>
@@ -26,7 +30,8 @@
                 </a>
             </li>
             <li class="navbar-option">
-                <a class="navbar-link" href="mailto:Johnny@morrisonhowe.com" target="_blank" rel="noreferrer" title="Contact">
+                <a class="navbar-link" href="mailto:Johnny@morrisonhowe.com" target="_blank" rel="noreferrer"
+                    title="Contact">
                     <img class="navbar-icon" src="images/email-white-18dp.svg" alt="Email">
                     <p class="navbar-link-text" id="last-navbar-icon-text">Email</p>
                 </a>
@@ -41,23 +46,61 @@
                 <h2>CompSci Undergrad at Portsmouth</h2>
             </div>
         </div>
+
         <div class="footer" id="things">
             <h1 class="footer-title">Things I've made:</h1>
-            <h2>Redesigned <a href="https://f1ssi0n.com/" target="_blank" rel="noreferrer">F1ssi0N.com</a>, a friend's portfolio</h2>
-            <h2><a href="/wordcounter/wordcounter.html" target="_blank" rel="noreferrer">Wordcounter</a> not using regex because I hadn't learned it yet</h2>
-            <h2>Built <a href="https://crystal.morrisonhowe.com" target="_blank" rel="noreferrer">crystalturnerbrightman.co.uk</a>, the successor to a simplesite website, built from scratch instead</h2>
-            <h2><a href="https://xmobiles.morrisonhowe.com" target="_blank" rel="noreferrer">X Mobile</a>: the result of using an existing mobile phone shop's (not great) website as a springboard to write a website for a hypothetical phone shop</h2>
-            <h2><a href="https://github.com/Dexyboiiii/atsomeone" target="_blank" rel="noreferrer">atsomeone</a>: remember that Discord April Fool's video? Remember your disappointment when it didn't work afterwards? This bot fixes that! Considerably rough, it was more of a learning experience and I may make it nicer at some point.</h2>
+        </div>
+
+        <div class="things-gallery">
+            <a id="thing-div-f1ssi0n" href="https://f1ssi0n.com/" target="_blank" rel="noreferrer">
+                <div>
+                    <h2>Redesigned F1ssi0N.com, a friend's portfolio</h2>
+                </div>
+            </a>
+            <a id="thing-div-wordcounter" href="/wordcounter/wordcounter.html" target="_blank" rel="noreferrer">
+                <div>
+                    <h2>Wordcounter not
+                        using regex because I hadn't learned it yet</h2>
+                </div>
+            </a>
+            <a id="thing-div-crystal" href="https://crystalturnerbrightman.co.uk" target="_blank" rel="noreferrer">
+                <div>
+                    <h2>Built crystalturnerbrightman.co.uk, the successor to a simplesite website,
+                        built from scratch instead</h2>
+                </div>
+            </a>
+            <a id="thing-div-xmobile" href="https://xmobiles.morrisonhowe.com" target="_blank" rel="noreferrer">
+                <div>
+                    <h2>X Mobile: the
+                        result of using an existing mobile phone shop's (not great) website as a springboard to write a
+                        website for a hypothetical phone shop</h2>
+                </div>
+            </a>
+            <a id="thing-div-atsomeone" href="https://github.com/Dexyboiiii/atsomeone" target="_blank" rel="noreferrer">
+                <div>
+                    <h2>atsomeone:
+                        remember that Discord April Fool's video? Remember your
+                        disappointment when it didn't work afterwards? This bot fixes that! Considerably rough, it's a
+                        work
+                        in progress^2</h2>
+                </div>
+            </a>
         </div>
         <div class="footer" id="footer">
             <h1 class="footer-title">About</h1>
             <h2>
-                Hi! I'm Johnny, a CS student learning web design (slowly) in his spare time who also <a href="https://www.strava.com/athletes/1166851" target="_blank" rel="noreferrer">rides trails</a> and <a href="https://www.instagram.com/dexyboiiii/" target="_blank" rel="noreferrer">takes photos</a>.</br>
+                Hi! I'm Johnny, a CS student learning web design and other programming shenanigans (slowly) in his spare
+                time who also <a href="https://www.strava.com/athletes/1166851" target="_blank" rel="noreferrer">rides
+                    trails</a> and <a href="https://www.instagram.com/dexyboiiii/" target="_blank"
+                    rel="noreferrer">takes photos</a>.</br>
                 If I do anything significant, I'll pop it here.
             </h2>
-            <p>morrisonhowe.com v2.2 / uses <a href="https://material.io/resources/icons/">Material Design icons</a>, <a href="https://rsms.me/inter/">Inter</a> and <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> / try changing your system theme :)</p>
+            <p>morrisonhowe.com v2.5 / uses <a href="https://material.io/resources/icons/">Material Design icons</a>, <a
+                    href="https://rsms.me/inter/">Inter</a> and <a
+                    href="https://fonts.google.com/specimen/Roboto">Roboto</a> / try changing your system theme :)</p>
         </div>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

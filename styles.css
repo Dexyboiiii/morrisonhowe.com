@@ -3,13 +3,24 @@
     --middle-color: rgba(88,88,88,0.8);
     --foreground-color: lightgrey;
     --hightlight-color: #7FFFD4;
+    --big-image: url(images/titleImageDark.jpg);
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
 }
 
-@media (orientation: landscape) {
-    
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: lightgrey;
+        --middle-color: rgba(88,88,88,0.8);
+        --foreground-color: #222222;
+        --hightlight-color: #7FFFD4;
+        --big-image: url(images/titleImageLight.jpg);
+        --primary-font: 'Inter', sans-serif;
+        --secondary-font: 'Roboto', sans-serif;
+    }
 }
+
+/* If you change the values above, remember to change the ones in the things divs!!! */
 
 body {
     background-color: var(--background-color);
@@ -84,6 +95,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-link-text {
     display: none;
 }
+
 /* Page Content */
 
 main {
@@ -92,7 +104,7 @@ main {
 
 .fullspan-image {
     height: 100vh;
-    background-image: url(images/titleImageDark.jpg);
+    background-image: var(--big-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,6 +128,73 @@ main {
 
 .footer {
     padding: 5vh 5vh 2.5vh 5vh;
+}
+
+.things-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.things-gallery > * {
+    display: flex;
+    width: 50%;
+    height: 40vh;
+    text-align: center;
+    align-items: center;
+}
+
+.things-gallery > *:active {
+    transition: all 50ms ease-in;
+    transform: scale(0.95);
+}
+
+.things-gallery > * > * > h2 {
+    padding: 1vh;
+    opacity: 0;
+    background-color: #222222;
+    color: lightgrey;
+    border-radius: 1vh;
+    transition: all 100ms ease-in;
+}
+
+.things-gallery > *:hover > * > h2 {
+    opacity: 1;
+}
+
+#thing-div-f1ssi0n {
+    background-image: url(/images/thing-f1ssi0n.png);
+    background-size: cover;
+}
+
+#thing-div-wordcounter {
+    background-image: url(/images/thing-wordcounter.png);
+    background-size: cover;
+}
+
+#thing-div-wordcounter > * > h2 {
+    background-color: lightgray;
+    color: #222;
+}
+
+#thing-div-crystal {
+    background-image: url(/images/thing-crystal.png);
+    background-size: cover;
+}
+
+#thing-div-xmobile {
+    background-image: url(/images/thing-xmobile.png);
+    background-size: cover;
+}
+
+#thing-div-atsomeone {
+    background-image: url(/images/thing-atsomeone.png);
+    background-size: cover;
+}
+
+#thing-div-atsomeone > * > h2 {
+    background-color: lightgrey;
+    color: #222;
 }
 
 .footer h1 {
@@ -164,30 +243,19 @@ a {
         width: 95vw;
     }
 
+    .things-gallery > * {
+        width: 100%;
+    }
+
+    .things-gallery > * > * > h2 {
+        opacity: 0.8;
+    }
+
     h1 {
         font-size: 7vh;
     }
 
     p {
         font-size: 2vh;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--foreground-color);
-        color: var(--background-color);
-    }
-
-    .footer a {
-        color: var(--background-color);
-    }
-
-    .footer a:hover {
-        color: var(--hightlight-color);
-    }
-
-    .fullspan-image {
-        background-image: url(images/titleImageLight.jpg);
     }
 }
