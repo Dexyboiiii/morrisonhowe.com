@@ -3,8 +3,21 @@
     --middle-color: rgba(88,88,88,0.8);
     --foreground-color: lightgrey;
     --hightlight-color: #7FFFD4;
+    --big-image: url(images/titleImageDark.jpg);
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: lightgrey;
+        --middle-color: rgba(88,88,88,0.8);
+        --foreground-color: #222222;
+        --hightlight-color: #7FFFD4;
+        --big-image: url(images/titleImageLight.jpg);
+        --primary-font: 'Inter', sans-serif;
+        --secondary-font: 'Roboto', sans-serif;
+    }
 }
 
 @media (orientation: landscape) {
@@ -92,7 +105,7 @@ main {
 
 .fullspan-image {
     height: 100vh;
-    background-image: url(images/titleImageDark.jpg);
+    background-image: var(--big-image);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -170,24 +183,5 @@ a {
 
     p {
         font-size: 2vh;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--foreground-color);
-        color: var(--background-color);
-    }
-
-    .footer a {
-        color: var(--background-color);
-    }
-
-    .footer a:hover {
-        color: var(--hightlight-color);
-    }
-
-    .fullspan-image {
-        background-image: url(images/titleImageLight.jpg);
     }
 }
