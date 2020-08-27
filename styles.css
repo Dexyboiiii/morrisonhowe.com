@@ -133,15 +133,17 @@ main {
 .things-gallery {
     display: flex;
     flex-wrap: wrap;
-    
+    margin: 2vh;
 }
 
 .things-gallery > * {
     display: flex;
-    width: 50%;
+    width: 33%;
+    margin: 1px;
     height: 40vh;
     text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
 .things-gallery > *:active {
@@ -154,6 +156,7 @@ main {
     opacity: 0;
     background-color: #222222;
     color: lightgrey;
+    box-shadow: 0px 4px 14px 0px rgba(0,0,0,1);
     border-radius: 1vh;
     transition: all 100ms ease-in;
 }
@@ -175,6 +178,7 @@ main {
 #thing-div-wordcounter > * > h2 {
     background-color: lightgray;
     color: #222;
+    box-shadow: 0px 4px 14px 0px lightgrey;
 }
 
 #thing-div-crystal {
@@ -195,6 +199,7 @@ main {
 #thing-div-atsomeone > * > h2 {
     background-color: lightgrey;
     color: #222;
+    box-shadow: 0px 4px 14px 0px lightgrey;
 }
 
 .footer h1 {
@@ -245,10 +250,12 @@ a {
 
     .things-gallery > * {
         width: 100%;
+        height: 25vh;
     }
 
     .things-gallery > * > * > h2 {
         opacity: 0.8;
+        font-size: 2vh;
     }
 
     h1 {
