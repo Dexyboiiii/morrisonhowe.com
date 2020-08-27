@@ -3,6 +3,7 @@
 function runOnLoad() {
     makeOpaqueByID("fullspan-image-1");
     document.getElementById("navbar-title-link").style.opacity = 0;
+    console.log("Welcome to morrisonhowe.com");
 }
 
 // goTo____() scroll to a specific element when activated
@@ -37,10 +38,10 @@ function scrollFunction(elementID, elementToHide) {
     if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         document.getElementById(elementID).style.opacity = 1;
         document.getElementById(elementToHide).style.opacity = 0;
-        console.log("Displaying");
+        // console.log("Displaying");
     } else {
         document.getElementById(elementID).style.opacity = 0;
         document.getElementById(elementToHide).style.opacity = 1;
-        console.log("Hidden");
+        // console.log("Hidden");
     }
 }
