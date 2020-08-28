@@ -37,11 +37,13 @@ window.onscroll = function() {scrollFunction("navbar-title-link", "fullspan-name
 function scrollFunction(elementID, elementToHide) {
     if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         document.getElementById(elementID).style.opacity = 1;
-        document.getElementById(elementToHide).style.opacity = 0;
+        document.getElementById(elementID).onclick = "";
+        document.getElementById(elementID).style.cursor = "pointer";
         // console.log("Displaying");
     } else {
         document.getElementById(elementID).style.opacity = 0;
-        document.getElementById(elementToHide).style.opacity = 1;
+        document.getElementById(elementID).onclick = "scrollToTop()";
+        document.getElementById(elementID).style.cursor = "default";
         // console.log("Hidden");
     }
 }
