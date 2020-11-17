@@ -81,7 +81,7 @@ body {
 }
 
 .hero-photo {
-    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/cover-image.jpg");
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/xMobile/cover-image.jpg");
 
     background-position: center;
     background-repeat: no-repeat;
