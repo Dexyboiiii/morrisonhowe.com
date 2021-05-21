@@ -1,6 +1,6 @@
 :root {
     --background-color: #222222;
-    --middle-color: rgba(88,88,88,0.8);
+    --middle-color: rgba(3, 57, 58,0.8);
     --foreground-color: lightgrey;
     --hightlight-color: #7FFFD4;
     --big-image: url(images/titleImageDark.jpg);
@@ -11,7 +11,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --background-color: lightgrey;
-        --middle-color: rgba(88,88,88,0.8);
+        --middle-color: rgba(3, 57, 58,0.8);
         --foreground-color: #222222;
         --hightlight-color: #7FFFD4;
         --big-image: url(images/titleImageLight.jpg);
@@ -207,6 +207,22 @@ main {
     box-shadow: 0px 4px 14px 0px lightgrey;
 }
 
+.footer-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.footer-headshot {
+    max-height: 30vh;
+    border-radius: 5px;
+}
+
+.footer-text {
+    margin: 0 3em;
+}
+
 .footer h1 {
     margin: 0;
 }
@@ -261,6 +277,14 @@ a {
     .things-gallery > * > * > h2 {
         opacity: 0.8;
         font-size: 2vh;
+    }
+
+    .footer-box {
+        flex-direction: column;
+    }
+
+    .footer-text {
+        margin: 0;
     }
 
     h1 {
