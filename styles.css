@@ -196,6 +196,11 @@ main {
     background-size: cover;
 }
 
+#thing-div-macciestimetable {
+    background-image: url(/images/thing-macciestimetable.png);
+    background-size: cover;
+}
+
 #thing-div-atsomeone > * > h2 {
     background-color: lightgrey;
     color: #222;
