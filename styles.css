@@ -165,6 +165,10 @@ main {
     opacity: 1;
 }
 
+.things-gallery > * {
+    border-radius: 5px;
+}
+
 #thing-div-f1ssi0n {
     background-image: url(/images/thing-f1ssi0n.png);
     background-size: cover;
@@ -191,8 +195,8 @@ main {
     background-size: cover;
 }
 
-#thing-div-atsomeone {
-    background-image: url(/images/thing-atsomeone.png);
+#thing-div-overflowwatchface {
+    background-image: url(/images/thing-overflowwatchface.png);
     background-size: cover;
 }
 
@@ -201,7 +205,7 @@ main {
     background-size: cover;
 }
 
-#thing-div-atsomeone > * > h2 {
+#thing-div-overflowwatchface > * > h2 {
     background-color: lightgrey;
     color: #222;
     box-shadow: 0px 4px 14px 0px lightgrey;
