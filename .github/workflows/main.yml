@@ -26,7 +26,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        server: ftp.cluster030.hosting.ovh.net
-        username: udizyrv
-        password: ${{ secrets.FTP_SERVER_PASSWORD }}
-        server-dir: public-html/
+        with:
+          server: ftp.cluster030.hosting.ovh.net
+          username: udizyrv
+          password: ${{ secrets.FTP_SERVER_PASSWORD }}
+          server-dir: public-html/
