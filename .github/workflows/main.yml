@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: Upload to OVH
 
 # Controls when the workflow will run
 on:
@@ -27,4 +25,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: FTP Deploy
-      - 
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        server: ftp.cluster030.hosting.ovh.net
+        username: udizyrv
+        password: ${{ secrets.FTP_SERVER_PASSWORD }}
+        server-dir: public-html/
