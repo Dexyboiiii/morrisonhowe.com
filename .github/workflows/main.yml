@@ -27,7 +27,7 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ftp.cluster030.hosting.ovh.net
-          username: udizyrv
+          server: ftp.cluster029.hosting.ovh.net
+          username: opywtbi
           password: ${{ secrets.FTP_SERVER_PASSWORD }}
           server-dir: public-html/
