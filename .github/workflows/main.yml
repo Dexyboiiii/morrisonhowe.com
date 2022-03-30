@@ -30,4 +30,4 @@ jobs:
           server: ftp.cluster029.hosting.ovh.net
           username: opywtbi
           password: ${{ secrets.FTP_SERVER_PASSWORD }}
-          server-dir: public-html/
+          server-dir: www/
