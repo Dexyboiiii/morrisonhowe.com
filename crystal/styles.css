@@ -1,0 +1,542 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #f7c9c9;
+        --bg-primary: #232323;
+        --bg-secondary: #2a2a2a;
+        --bg-menu-primary: #141418b0;
+        --bg-menu-secondary: #141418;
+        --highlight: #00bffe;
+        --highlight-muted: #005a797c;
+        --highlight-light: #f7c9c9;
+        --font-primary: 'Playfair Display', serif;
+        --font-secondary: 'Inter', sans-serif;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-primary: #232323;
+        --bg-primary: #f7c9c9;
+        --bg-secondary: #e0abab;
+        --bg-menu-primary: #fcececb0;
+        --bg-menu-secondary: #fcecec;
+        --highlight: #00759c;
+        --highlight-muted: #009ed37c;
+        --highlight-light: #232323;
+        --font-primary: 'Playfair Display', serif;
+        --font-secondary: 'Inter', sans-serif;
+    }
+}
+
+/*-------------------------------------DESKTOP CSS-------------------------------------------------*/
+
+@media (orientation: landscape) {
+    main {
+        margin-top: 15vh;
+    }
+
+    main > * {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    main .main-title {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    #get-in-touch {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding-left: 5vw !important;
+        padding-right: 5vw !important;
+        align-items: center;
+    }
+
+    .navbar {
+        top: 0;
+        width: 99.75vw;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        transition: ease-in 100ms;
+    }
+
+    .nav-link:hover {
+        background: var(--bg-menu-secondary);
+        color: var(--highlight);
+    }
+
+    .nav-link:active {
+        background: var(--bg-menu-secondary);
+        color: var(--highlight-light);
+    }
+
+    .nav-link span {
+        display: none;
+    }
+
+    .nav-link p {
+        margin-left: 3vw;
+    }
+
+    .main-title {
+        margin-bottom: 10vh;
+    }
+
+    .short-about-div {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10vh;
+    }
+
+    .short-about-div img {
+        width: 50%;
+        border-radius: 1vh;
+    }
+
+    .padded-text-div {
+        padding: 10vh
+    }
+
+    #image-container {
+        width: 100%;
+    }
+
+    .homepage-showcase-items {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .homepage-spacer {
+        margin: 10vh 20vw 10vh 20vw;
+        width: 60vw;
+    }
+
+    .photos-box-item {
+        background-color: var(--bg-secondary);
+        margin-top: 2.5%;
+        width: 100%;
+        border-radius: 0.5rem;
+        display: flex;
+    }
+
+    .photos-box-image {
+        margin: 2%;
+        width: 20vw;
+    }
+
+    .photos-box-just-photos {
+        width: auto;
+        height: 40vh;
+    }
+
+    .photos-box-youtube {
+        margin: 2%;
+        width: 33%;
+        height: 80%;
+    }
+
+    .photos-box-text {
+        margin: 2%;
+        /* width: 80%; */
+    }
+
+    .images-grid {
+        column-count: 4;
+    }
+
+    .images-grid img:hover {
+        opacity: 0.6;
+    }
+
+    .images-grid img:active {
+        transform: scale(0.9);
+    }
+
+    .showreels-flex div {
+        width: 20vw;
+    }
+
+    .chip-div {
+        display: inline-block;
+        padding: 1vw;
+        margin-bottom: 1vh;
+    }
+
+    .image-tooltip {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        visibility: hidden;
+        z-index: 100;
+    }
+
+    .images-grid-item:hover .image-tooltip {
+        visibility: visible;
+    }
+
+    footer {
+        padding: 5vh 15vw;
+        margin-top: 5vh;
+    }
+
+    h1 {
+        font-size: 5em;
+        font-family: var(--font-primary);
+    }
+    
+    h2 {
+        font-size: 2em;
+        font-family: var(--font-primary);
+    }
+    
+    p {
+        font-size: 1.25em;
+        font-family: var(--font-secondary);
+        text-align: justify;
+    }
+
+    #crystal-profile-dark {
+        margin: 1vw;
+        margin-right: 15vw;
+        width: 35vw;
+        float: right;
+        border-radius: 2vh;
+    }
+}
+
+@media (max-width: 1130px) {
+    main > * {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    main .main-title {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .short-about-div {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
+.cv {
+    width: 70%;
+     height: 2100px ;
+}
+
+/*-------------------------------------MOBILE CSS-------------------------------------------------*/
+
+@media (orientation: portrait) {
+    /* Undoing the rules above for thin landscape pages */
+    main > * {
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    main .main-title {
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .short-about-div {
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    main {
+        padding: 2em 2em 10vh 2em;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 8vh;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .nav-link span {
+        font-size: 5vh;
+        margin: 1rem;
+    }
+
+    .link-text {
+        display: none;
+    }
+
+    .main-title {
+        font-size: 12vw;
+        margin-top: 0;
+    }
+
+    .homepage-image-div {
+        width: 85vw;
+    }
+
+    .homepage-showcase-items {
+        flex-direction: column;
+    }
+
+    .photos-box-item {
+        background-color: var(--bg-secondary);
+        margin-top: 5vh;
+        width: 100%;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photos-box-image {
+        margin: 4%;
+        width: 92%;
+    }
+
+    .photos-box-text {
+        margin: 4%;
+    }
+
+    .photos-box-youtube {
+        margin: 4%;
+        width: 92%;
+    }
+
+    #crystal-profile-dark {
+        width: 85vw;
+        border-radius: 2vw;
+    }
+
+    #get-in-touch {
+        text-align: center;
+    }
+
+    .chip-div {
+        display: inline-block;
+        padding: 2vw;
+        margin: 1vw;
+    }
+
+    .images-grid {
+        column-count: 2;
+    }
+
+    .homepage-spacer {
+        margin: 10vh 0;
+    }
+
+    footer {
+        padding: 2em;
+        padding-bottom: 10vh;
+    }
+
+    h1 {
+        font-size: 8vw;
+        font-family: var(--font-primary);
+        overflow-wrap: break-word;
+    }
+    
+    h2 {
+        font-size: 6vw;
+        font-family: var(--font-primary);
+    }
+    
+    p {
+        font-size: 1em;
+        font-family: var(--font-secondary);
+    }
+
+    #viewing {
+        background-color: var(--highlight-muted);
+        border-radius: 2vw;
+    }
+}
+
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-menu-secondary);
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--highlight);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    background-color: var(--bg-menu-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.homepage-showcase-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homepage-showcase-items iframe {
+    flex: 1;
+}
+
+.showreels-flex {
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.showreels-flex div {
+    margin: 1vh;
+    padding: 2vh;
+    background-color: var(--bg-primary);
+    border-radius: 2vh;
+}
+
+#get-in-touch {
+    background-color: var(--bg-primary);
+    padding: 5vh;
+    border-radius: 2vh;
+}
+
+.photos-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .images-grid thanks to css-tricks.com */
+.images-grid {
+    padding: 1vh;
+    /* Prevent vertical gaps */
+    line-height: 0;
+    column-gap: 0px;  
+  }
+  
+.images-grid img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+    transition: opacity ease 200ms, transform ease 100ms;
+}
+
+.contact-info-chips {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.chip-div {
+    background-color: var(--bg-menu-secondary);
+    /* border-radius is the maximum allowed, giving a rounded square */
+    border-radius: 100vh;
+    transition: background-color ease 100ms;
+}
+
+.chip-div:hover {
+    background-color: var(--highlight-light);
+    color: var(--highlight);
+}
+
+.chip-div p {
+    padding: 0;
+    margin: 0;
+}
+
+.chip-div i,
+.chip-div p {
+    display: inline;
+    font-size: 1em;
+}
+
+#crystal-profile-dark {
+    border: 1px solid var(--highlight);
+}
+
+.homepage-spacer {
+    height: 1px;
+    background-color: var(--highlight-light);
+}
+
+footer {
+    background-color: var(--bg-primary);
+}
+
+footer p {
+    font-size: 0.75em;
+}
+
+h1 {
+    color: var(--highlight);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-weight: normal;
+}
+
+a {
+    color: var(--highlight);
+    text-decoration: none;
+    transition: color ease-in 150ms;
+}
+
+a:hover {
+    color: var(--highlight-light);
+}
+
+#instagram-pill-button:hover {
+    background-color: lightgray;
+}
+
+#purchase-pill-button {
+    background-color: goldenrod;
+    color: white;
+}
+
+#purchase-pill-button:hover {
+    background-color: gold;
+}
+
+.cv {
+width: 100%;
+}
