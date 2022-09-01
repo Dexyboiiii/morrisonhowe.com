@@ -17,7 +17,7 @@
 <body onload="runOnLoad()">
     <script src="./nodarkreader.min.js"></script>
     <nav class="navbar">
-        <h2 class="navbar-title"><a onclick="scrollToTop()" id="navbar-title-link">Johnny Morrison-Howe</a></h2>
+        <h3 class="navbar-title"><a onclick="scrollToTop()" id="navbar-title-link">Johnny Morrison-Howe</a></h3>
         <ul class="navbar-list">
             <li class="navbar-option">
                 <a class="navbar-link" onclick="goToThings()" title="Projects">
@@ -45,53 +45,80 @@
         <div class="fullspan-image" id="fullspan-image-1">
             <div class="fullspan-text">
                 <h1 id="fullspan-name">Johnny Morrison-Howe</h1>
-                <h2>CompSci Undergrad at Portsmouth<br>Year in Industry at IBM</h2>
+                <h3>CompSci Undergrad at Portsmouth<br>Year in Industry at IBM</h3>
             </div>
         </div>
 
-        <div class="footer" id="things">
-            <h1 class="footer-title">Things I've made</h1>
+        <div class="things-title" id="things">
+            <h1>Things I've made</h1>
         </div>
+        
+        <h2 class="things-subtitle">For <em>IBM UK Labs Hursley</em></h2>
 
         <div class="things-gallery">
-            <a id="thing-div-f1ssi0n" href="https://f1ssi0n.com/" target="_blank" rel="noreferrer">
+            <a id="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
-                    <h2>Redesigned <em>F1ssi0N.com</em>, a friend's portfolio</h2>
+                    <h3>Designed and built the React.js UI, Express.js API and mongodb database for a timer tracking startups for IBM Liberty. Includes graphing capabilities, statistical analysis and detailed run times.</h3>
                 </div>
             </a>
-            <a id="thing-div-wordcounter" href="/wordcounter/wordcounter.html" target="_blank" rel="noreferrer">
+            <a id="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
-                    <h2><em>Wordcounter</em> (stubbornly not
-                        using regex, I hadn't learned it yet)</h2>
+                    <h3>Created a Java/Spring based web frontend for CICS Banking Sample Application, demonstrating the use of z/OS Connect EE</h3>
                 </div>
             </a>
-            <a id="thing-div-crystal" href="./crystal/" target="_blank" rel="noreferrer">
+            <a id="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
-                    <h2>Upgraded another friend's portfolio as my first paid project. <strong>The site is since deprecated</strong>, but preserved without images.</h2>
+                    <h3>Configured and deployed an instance of ReportPortal on an internal Kubernetes cluster</h3>
                 </div>
             </a>
-            <a id="thing-div-xmobile" href="/xMobile/index.html" target="_blank" rel="noreferrer">
+            <a id="thing-div-labhack" target="_blank" rel="noreferrer">
                 <div>
-                    <h2><em>X Mobile</em>, the
+                    <h3>Participated in the two-day overnight IBM LabHack 2022; With my team, created part of an application written to improve the booking flow at the Hursley House. Along with a presentation of concept features, we came <strong>second place</strong> out of the 6 teams!<br>(medal pictured)</h3>
+                </div>
+            </a>
+        </div>
+
+        <h2 class="things-subtitle">Personal projects</h2>
+
+        <div class="things-gallery" style="margin-bottom: 5em;">
+            <a class="thing-clickable" id="thing-div-f1ssi0n" href="https://f1ssi0n.com/" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Redesigned <em>F1ssi0N.com</em>, a friend's portfolio</h3>
+                </div>
+            </a>
+            <a class="thing-clickable" id="thing-div-wordcounter" href="/wordcounter/wordcounter.html" target="_blank" rel="noreferrer">
+                <div>
+                    <h3><em>Wordcounter</em> (stubbornly not
+                        using regex, I hadn't learned it yet)</h3>
+                </div>
+            </a>
+            <a class="thing-clickable" id="thing-div-crystal" href="./crystal/" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Upgraded another friend's portfolio as my first paid project. <strong>The site is since deprecated</strong>, but preserved without images.</h3>
+                </div>
+            </a>
+            <a class="thing-clickable" id="thing-div-xmobile" href="/xMobile/index.html" target="_blank" rel="noreferrer">
+                <div>
+                    <h3><em>X Mobile</em>, the
                         result of using an existing mobile phone shop's (not great) website as a springboard to write a
-                        website for a hypothetical phone shop</h2>
+                        website for a hypothetical phone shop</h3>
                 </div>
             </a>
-            <a id="thing-div-overflowwatchface" href="https://github.com/Dexyboiiii/Overflow-Watchface" target="_blank"
+            <a class="thing-clickable" id="thing-div-overflowwatchface" href="https://github.com/Dexyboiiii/Overflow-Watchface" target="_blank"
                 rel="noreferrer">
                 <div>
-                    <h2><em>Overflow Watchface</em> A Wear OS Watchface that takes advantage of Inter's variable font.
+                    <h3><em>Overflow Watchface</em> A Wear OS Watchface that takes advantage of Inter's variable font.
                         The numbers overflow off the edge of a round screen, and font weight animates when exiting
-                        ambient mode.</h2>
+                        ambient mode.</h3>
                 </div>
             </a>
-            <a id="thing-div-macciestimetable" href="https://github.com/Dexyboiiii/maccies_timetable" target="_blank"
+            <a class="thing-clickable" id="thing-div-macciestimetable" href="https://github.com/Dexyboiiii/maccies_timetable" target="_blank"
                 rel="noreferrer">
                 <div>
-                    <h2><em>Maccies timetable</em> converts shifts from the current jank website to an ics file ready to
+                    <h3><em>Maccies timetable</em> converts shifts from the current jank website to an ics file ready to
                         import to your calendar, so you'll never miss a shift again! (Since then, I've left and new
                         timetable
-                        system has been created, so this no longer works)</h2>
+                        system has been created, so this no longer works)</h3>
                 </div>
             </a>
         </div>
@@ -100,7 +127,7 @@
             <div class="footer-box">
                 <img class="footer-headshot" src="images/headshot.jpg">
                 <div class="footer-text">
-                    <h2>
+                    <h3>
                         Born in Lewisham, raised in Deal, and coming to an Industrial Placement near you(so long as
                         you're at IBM Hursley), Johnny is a CS student at the University of Portsmouth with specific
                         interests in learning web design and app development. He's gained experience with the IBM CICS Transaction Server, Docker/Kubernetes, HTML/CSS, Flutter/Dart, Spring/Java and React/JS.
@@ -108,7 +135,7 @@
                             href="https://www.strava.com/athletes/1166851" target="_blank" rel="noreferrer">riding
                             trails</a> and <a href="https://www.instagram.com/dexyboiiii/" target="_blank"
                             rel="noreferrer">taking photos</a>.</br>
-                    </h2>
+                    </h3>
                     <p>morrisonhowe.com v2.7 / uses <a href="https://material.io/resources/icons/">Material Design
                             icons</a>, <a href="https://rsms.me/inter/">Inter</a> and <a
                             href="https://fonts.google.com/specimen/Roboto">Roboto</a> / try changing your system theme

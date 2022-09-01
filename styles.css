@@ -130,6 +130,19 @@ main {
     padding: 5vh 5vh 2.5vh 5vh;
 }
 
+.things-title {
+    padding: 5vh 5vh 1vh 5vh;
+}
+
+.things-title > h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.things-subtitle {
+    padding-left: 5vh;
+}
+
 .things-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -146,14 +159,17 @@ main {
     justify-content: center;
 }
 
-.things-gallery > *:active {
+.things-gallery >  .thing-clickable:active {
     transition: all 50ms ease-in;
     transform: scale(0.95);
 }
 
-.things-gallery > * > * > h2 {
-    padding: 1vh;
+.things-gallery > .thing-clickable > * > h3 {
     opacity: 0;
+}
+
+.things-gallery > * > * > h3 {
+    padding: 1vh;
     background-color: #222222;
     color: lightgrey;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,1);
@@ -161,12 +177,18 @@ main {
     transition: all 100ms ease-in;
 }
 
-.things-gallery > *:hover > * > h2 {
+.things-gallery >  .thing-clickable:hover > * > h3 {
     opacity: 1;
 }
 
 .things-gallery > * {
     border-radius: 5px;
+}
+
+#thing-div-labhack {
+    background-image: url(/images/thing-labhack.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 #thing-div-f1ssi0n {
@@ -179,7 +201,7 @@ main {
     background-size: cover;
 }
 
-#thing-div-wordcounter > * > h2 {
+#thing-div-wordcounter > * > h3 {
     background-color: lightgray;
     color: #222;
     box-shadow: 0px 4px 14px 0px lightgrey;
@@ -205,10 +227,14 @@ main {
     background-size: cover;
 }
 
-#thing-div-overflowwatchface > * > h2 {
+#thing-div-overflowwatchface > * > h3 {
     background-color: lightgrey;
     color: #222;
     box-shadow: 0px 4px 14px 0px lightgrey;
+}
+
+.footer {
+    background-color: rgb(185, 166, 184);
 }
 
 .footer-box {
@@ -250,6 +276,13 @@ h1 {
 h2 {
     font-family: var(--primary-font);
     font-weight: 400;
+    font-size: 3em;
+}
+
+h3 {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 1.5em;
 }
 
 p {
@@ -278,7 +311,7 @@ a {
         height: 25vh;
     }
 
-    .things-gallery > * > * > h2 {
+    .things-gallery > * > * > h3 {
         opacity: 0.8;
         font-size: 2vh;
     }
