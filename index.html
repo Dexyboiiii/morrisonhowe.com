@@ -16,13 +16,19 @@
 
 <body onload="runOnLoad()">
     <script src="./nodarkreader.min.js"></script>
-    <nav class="navbar">
-        <h3 class="navbar-title"><a onclick="scrollToTop()" id="navbar-title-link">Johnny Morrison-Howe</a></h3>
+    <nav class="navbar" id="navbar">
+        <h3 class="navbar-title"><a onclick="scrollToTop()">Johnny Morrison-Howe</a></h3>
         <ul class="navbar-list">
             <li class="navbar-option">
-                <a class="navbar-link" onclick="goToThings()" title="Projects">
+                <a class="navbar-link" onclick="goToPlacement()" title="Industrial Placement">
+                    <img class="navbar-icon" src="images/briefcase.svg" alt="Projects">
+                    <p class="navbar-link-text">Industrial Placement</p>
+                </a>
+            </li>
+            <li class="navbar-option">
+                <a class="navbar-link" onclick="goToThings()" title="Personal Projects">
                     <img class="navbar-icon" src="images/category-white-18dp.svg" alt="Projects">
-                    <p class="navbar-link-text">Projects</p>
+                    <p class="navbar-link-text">Personal Projects</p>
                 </a>
             </li>
             <li class="navbar-option">
@@ -46,16 +52,45 @@
             <div class="fullspan-text">
                 <h1 id="fullspan-name">Johnny Morrison-Howe</h1>
                 <h3>CompSci Undergrad at Portsmouth<br>Year in Industry at IBM</h3>
+                <div class="fullspan-navbar">
+                    <ul class="navbar-list">
+                        <li class="navbar-option">
+                            <a class="navbar-link" onclick="goToPlacement()" title="Industrial Placement">
+                                <img class="navbar-icon" src="images/briefcase.svg" alt="Projects">
+                                <p class="navbar-link-text">Industrial Placement</p>
+                            </a>
+                        </li>
+                        <li class="navbar-option">
+                            <a class="navbar-link" onclick="goToThings()" title="Projects">
+                                <img class="navbar-icon" src="images/category-white-18dp.svg" alt="Projects">
+                                <p class="navbar-link-text">Projects</p>
+                            </a>
+                        </li>
+                        <li class="navbar-option">
+                            <a class="navbar-link" onclick="goToFooter()" title="About">
+                                <img class="navbar-icon" src="images/person-white-18dp.svg" alt="About">
+                                <p class="navbar-link-text">About</p>
+                            </a>
+                        </li>
+                        <li class="navbar-option">
+                            <a class="navbar-link" href="mailto:Johnny.morrisonhowe@gmail.com" target="_blank" rel="noreferrer"
+                                title="Contact">
+                                <img class="navbar-icon" src="images/email-white-18dp.svg" alt="Email">
+                                <p class="navbar-link-text" id="last-navbar-icon-text">Email</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="things-title" id="things">
+        <div class="things-title">
             <h1>Things I've made</h1>
         </div>
         
         <h2 class="things-subtitle">For <em>IBM UK Labs Hursley</em></h2>
 
-        <div class="things-gallery">
+        <div class="things-gallery" id="placement">
             <a id="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
                     <h3>Designed and built the React.js UI, Express.js API and mongodb database for a timer tracking startups for IBM Liberty. Includes graphing capabilities, statistical analysis and detailed run times.</h3>
@@ -71,7 +106,7 @@
                     <h3>Configured and deployed an instance of ReportPortal on an internal Kubernetes cluster</h3>
                 </div>
             </a>
-            <a id="thing-div-labhack" target="_blank" rel="noreferrer">
+            <a id="thing-div-labhack" href="/images/thing-labhack.jpg" target="_blank" rel="noreferrer">
                 <div>
                     <h3>Participated in the two-day overnight IBM LabHack 2022; With my team, created part of an application written to improve the booking flow at the Hursley House. Along with a presentation of concept features, we came <strong>second place</strong> out of the 6 teams!<br>(medal pictured)</h3>
                 </div>
@@ -80,7 +115,7 @@
 
         <h2 class="things-subtitle">Personal projects</h2>
 
-        <div class="things-gallery" style="margin-bottom: 5em;">
+        <div class="things-gallery" id="things" style="margin-bottom: 5em;">
             <a class="thing-clickable" id="thing-div-f1ssi0n" href="https://f1ssi0n.com/" target="_blank" rel="noreferrer">
                 <div>
                     <h3>Redesigned <em>F1ssi0N.com</em>, a friend's portfolio</h3>
