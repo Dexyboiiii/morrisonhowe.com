@@ -9,15 +9,15 @@ function runOnLoad() {
 // goTo____() scroll to a specific element when activated
 
 function goToFooter() {
-    document.getElementById('footer').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    document.getElementById('footer').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function goToPlacement() {
-    document.getElementById('placement').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    document.getElementById('placement').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function goToThings() {
-    document.getElementById('things').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    document.getElementById('things').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function scrollToTop() {

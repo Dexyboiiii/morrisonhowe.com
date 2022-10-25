@@ -153,6 +153,7 @@ main {
 
 .things-subtitle {
     padding-left: 5vh;
+    scroll-margin-top: 14vh;
 }
 
 .things-gallery {
@@ -197,10 +198,18 @@ main {
     border-radius: 5px;
 }
 
+#thing-div-blank {
+    background-color: var(--middle-color);
+}
+
 #thing-div-labhack {
     background-image: url(/images/thing-labhack.jpg);
     background-size: cover;
     background-position: center;
+}
+
+#labhack-description:hover {
+    opacity: 0;
 }
 
 #thing-div-f1ssi0n {
@@ -248,6 +257,7 @@ main {
 .footer {
     background-color: var(--middle-color);
     color: var(--inverse-foreground-color);
+    scroll-margin-top: 10vh;
 }
 
 .footer-box {
