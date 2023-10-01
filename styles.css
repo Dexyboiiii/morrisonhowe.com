@@ -6,6 +6,7 @@
     --big-image: url(images/robert-metz-5e4hMnyy0tw-unsplash.jpg);
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
+    --monospace-font: 'JetBrains Mono', monospace;
 }
 
 @media (prefers-color-scheme: light) {
@@ -18,6 +19,7 @@
         --big-image: url(images/cristian-s-W1fZKMIlkpM-unsplash.jpg);
         --primary-font: 'Inter', sans-serif;
         --secondary-font: 'Roboto', sans-serif;
+        --monospace-font: 'JetBrains Mono', monospace;
     }
 }
 
@@ -198,8 +200,20 @@ main {
     border-radius: 5px;
 }
 
-#thing-div-blank {
+.thing-div-blank {
     background-color: var(--middle-color);
+}
+
+#thing-div-podcastscrobbler {
+    background-image: url(/images/podcastScrobbler.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#thing-div-podcastscrobblerdissertation {
+    background-image: url(/images/podcastScrobblerDissertation.webp);
+    background-size: cover;
+    background-position: center;
 }
 
 #thing-div-labhack {
@@ -305,7 +319,6 @@ h2 {
 h3 {
     font-family: var(--primary-font);
     font-weight: 400;
-    font-size: 1.5em;
 }
 
 p {

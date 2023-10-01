@@ -8,21 +8,24 @@
     <meta name="theme-color" content="#03393a">
     <meta name="darkreader" content="NO-DARKREADER-PLUGIN" />
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
     <title>Johnny Morrison-Howe</title>
 </head>
 
 <body onload="runOnLoad()">
     <script src="./nodarkreader.min.js"></script>
     <nav class="navbar" id="navbar">
-        <h3 class="navbar-title"><a onclick="scrollToTop()">Johnny Morrison-Howe</a></h3>
+        <h3 class="navbar-title" id="navbar-title-link"><a onclick="scrollToTop()">Johnny Morrison-Howe</a></h3>
         <ul class="navbar-list">
             <li class="navbar-option">
-                <a class="navbar-link" onclick="goToPlacement()" title="Industrial Placement">
+                <a class="navbar-link" onclick="goToPlacement()" title="Work">
                     <img class="navbar-icon" src="images/briefcase.svg" alt="Projects">
-                    <p class="navbar-link-text">Industrial Placement</p>
+                    <p class="navbar-link-text">Work</p>
                 </a>
             </li>
             <li class="navbar-option">
@@ -41,7 +44,7 @@
                 <a class="navbar-link" href="mailto:Johnny.morrisonhowe@gmail.com" target="_blank" rel="noreferrer"
                     title="Contact">
                     <img class="navbar-icon" src="images/email-white-18dp.svg" alt="Email">
-                    <p class="navbar-link-text" id="last-navbar-icon-text">Email</p>
+                    <p class="navbar-link-text">Email</p>
                 </a>
             </li>
         </ul>
@@ -51,14 +54,14 @@
         <div class="fullspan-image" id="fullspan-image-1">
             <div class="fullspan-text">
                 <h1 id="fullspan-name">Johnny Morrison-Howe</h1>
-                <h3>BSc Computer Science at University of Portsmouth</h3>
-                <h3>Java Developer for Novatech</h3>
+                <h3><strong>BSc (Hons) Computer Science</strong>  University of Portsmouth</h3>
+                <h3><strong>Java Developer</strong>  Novatech</h3>
                 <div class="fullspan-navbar">
                     <ul class="navbar-list">
                         <li class="navbar-option">
-                            <a class="navbar-link" onclick="goToPlacement()" title="Industrial Placement">
+                            <a class="navbar-link" onclick="goToPlacement()" title="Work">
                                 <img class="navbar-icon" src="images/briefcase.svg" alt="Projects">
-                                <p class="navbar-link-text">Industrial Placement</p>
+                                <p class="navbar-link-text">Work</p>
                             </a>
                         </li>
                         <li class="navbar-option">
@@ -77,7 +80,7 @@
                             <a class="navbar-link" href="mailto:Johnny.morrisonhowe@gmail.com" target="_blank" rel="noreferrer"
                                 title="Contact">
                                 <img class="navbar-icon" src="images/email-white-18dp.svg" alt="Email">
-                                <p class="navbar-link-text" id="last-navbar-icon-text">Email</p>
+                                <p class="navbar-link-text">Email</p>
                             </a>
                         </li>
                     </ul>
@@ -88,21 +91,36 @@
         <div class="things-title">
             <h1>Things I've made</h1>
         </div>
-        
-        <h2 class="things-subtitle" id="placement">For <em>IBM UK Labs Hursley</em></h2>
+
+        <h2 class="things-subtitle" id="work">For <em>Novatech</em></h2>
 
         <div class="things-gallery">
-            <a id="thing-div-blank" target="_blank" rel="noreferrer">
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
-                    <h3>Designed and built the React.js UI, Express.js API and mongodb database for a timer tracking startups for IBM Liberty. Includes graphing capabilities, statistical analysis and detailed run times.</h3>
+                    <h3>Consolidating various Java Swing applications into one for improved consistency and security on the backend Java EE server, as well as making general improvements and feature additions to the application as feedback and requests come in throughout the company</h3>
                 </div>
             </a>
-            <a id="thing-div-blank" target="_blank" rel="noreferrer">
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Took part in architecting and implementing an asset tagging and tracking system for Novatech's Managed IT Services. Implemented as part of 3 different applications in a Swing/WildFly/MSSQL stack, it allows for a client's assets to be tracked as they move throughout our building, out to an end-user, and back in again.</h3>
+                </div>
+            </a>
+        </div>
+
+        <h2 class="things-subtitle">For <em>IBM UK Labs Hursley</em></h2>
+
+        <div class="things-gallery">
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Designed and built the React.js UI, Express.js API and mongodb database for a timer tracking startups for IBM Liberty. Includes graphing capabilities, statistical analysis and detailed run times</h3>
+                </div>
+            </a>
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
                     <h3>Created a Java/Spring based web frontend for CICS Banking Sample Application, demonstrating the use of z/OS Connect EE</h3>
                 </div>
             </a>
-            <a id="thing-div-blank" target="_blank" rel="noreferrer">
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
                     <h3>Configured and deployed an instance of ReportPortal on an internal Kubernetes cluster</h3>
                 </div>
@@ -114,8 +132,24 @@
             </a>
         </div>
 
-        <div>
-        <h2 class="things-subtitle" id="things">Personal projects</h2>
+
+        <h2 class="things-subtitle" id="things">Final Year Project - <em>Podcast<wbr>Scrobbler</em></h2>
+
+        <div class="things-gallery">
+            <a class="thing-clickable" id="thing-div-podcastscrobbler" href="https://github.com/Dexyboiiii/Podcast-Scrobbler" target="_blank" rel="noreferrer">
+                <div>
+                    <h3><em>PodcastScrobbler</em> - an Android podcast client written in Kotlin with Jetpack Compose. It had the aim of parsing tracklists out of descriptions in music podcasts, approximating the currently playing track, and showing displaying it to the user. Although I was not able to complete it in time for the dissertation deadline, the end goal is for metadata to be sent to the music tracking service, Last.fm.</h3>
+                </div>
+            </a>
+            <a class="thing-clickable" id="thing-div-podcastscrobblerdissertation" href="PodcastScrobbler-Dissertation.pdf" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>The dissertation for the project<br>(I earned a first!)</h3>
+                </div>
+            </a>
+        </div>
+
+
+        <h2 class="things-subtitle">Personal projects</h2>
 
         <div class="things-gallery" style="margin-bottom: 5em;">
             <a class="thing-clickable" id="thing-div-f1ssi0n" href="https://f1ssi0n.com/" target="_blank" rel="noreferrer">
@@ -131,7 +165,7 @@
             </a>
             <a class="thing-clickable" id="thing-div-crystal" href="./crystal/" target="_blank" rel="noreferrer">
                 <div>
-                    <h3>Upgraded another friend's portfolio as my first paid project. <strong>The site is since deprecated</strong>, but preserved without images.</h3>
+                    <h3>Upgraded another friend's portfolio as my first paid project. <strong>The site is since deprecated</strong>, but preserved without images</h3>
                 </div>
             </a>
             <a class="thing-clickable" id="thing-div-xmobile" href="/xMobile/index.html" target="_blank" rel="noreferrer">
@@ -146,7 +180,7 @@
                 <div>
                     <h3><em>Overflow Watchface</em> A Wear OS Watchface that takes advantage of Inter's variable font.
                         The numbers overflow off the edge of a round screen, and font weight animates when exiting
-                        ambient mode.</h3>
+                        ambient mode</h3>
                 </div>
             </a>
             <a class="thing-clickable" id="thing-div-macciestimetable" href="https://github.com/Dexyboiiii/maccies_timetable" target="_blank"
@@ -158,22 +192,21 @@
                         system has been created, so this no longer works)</h3>
                 </div>
             </a>
-        </div></div>
+        </div>
         <div class="footer">
-            <h1 class="footer-title" id="footer">About my self</h1>
+            <h1 class="footer-title" id="footer">Hello, world!</h1>
             <div class="footer-box">
-                <img class="footer-headshot" src="images/footer-headshot.jpg">
+                <img alt="A photo of me with my longboard" class="footer-headshot" src="images/footer-headshot.jpg">
                 <div class="footer-text">
                     <h3>
-                        Born in Lewisham, raised in Deal, and coming to a University near you(as long as you're in Portsmouth), Johnny is a CompSci undergrad at the University of Portsmouth with specific
-                        interests in learning web design and app development. Currently working as a Junior Java Developer at Novatech, he's also gained experience with the IBM CICS Transaction Server, Spring, JavaScript/React, HTML/CSS, Dart/Flutter and Docker/Kubernetes.
+                        Born in Lewisham, raised in Deal, and coming to a city near you! (as long as you're in Portsmouth)<br> I'm a Software Engineer currently working as a Junior Java Developer for Novatech. In 2023 I completed my BSc (Hons) at the University of Portsmouth, achieving a 2:1. <br>Previous to Novatech, I did a 14-month industrial placement for IBM UK Labs in Hursley. In my four years programming, I've worked with the IBM CICS Transaction Server, Java, Swing, Spring, Kotlin, Jetpack Compose, MSSQL/PostgreSQL, JavaScript, React, HTML/CSS, Dart, Flutter, Python, Bash, Docker and Kubernetes.<br>
                         When he's not glued to a keyboard, you can occasionally find him <a
                             href="https://www.strava.com/athletes/1166851" target="_blank" rel="noreferrer">riding
                             trails</a> and <a href="https://www.instagram.com/dexyboiiii/" target="_blank"
-                            rel="noreferrer">taking photos</a>.</br>
+                            rel="noreferrer">taking photos</a>.<br>
                     </h3>
-                    <p style="opacity: 0.5;">morrisonhowe.com v3.1 / uses <a href="https://m3.material.io/styles/icons/overview">Material Design
-                            icons</a>, <a href="https://rsms.me/inter/">Inter</a> and <a
+                    <p style="opacity: 0.5;">morrisonhowe.com v3.2 / uses <a href="https://m3.material.io/styles/icons/overview">Material Design
+                            icons</a>, <a href="https://rsms.me/inter/">Inter</a>, <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a> and <a
                             href="https://fonts.google.com/specimen/Roboto">Roboto</a>
                     </p>
                 </div>
