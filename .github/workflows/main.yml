@@ -1,4 +1,4 @@
-name: Upload to OVH
+name: SSH Deploy to NUC
 
 # Controls when the workflow will run
 on:
