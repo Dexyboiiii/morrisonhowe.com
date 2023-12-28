@@ -21,13 +21,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
         with:
-          server: ftp.cluster029.hosting.ovh.net
-          username: opywtbi
-          password: ${{ secrets.FTP_SERVER_PASSWORD }}
-          server-dir: www/
+          SSH_PRIVATE_KEY: ${{ secrets.DEXYBOIIII_NUC_PRIVATE_KEY_DEPLOY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
