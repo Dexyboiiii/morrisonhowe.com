@@ -7,7 +7,7 @@
     --background-color: #222222;
     --middle-color: rgba(3, 57, 58,0.8);
     --foreground-color: lightgrey;
-    --hightlight-color: #7FFFD4;
+    --hightlight-color: rgb(210, 118, 209);
     --novatech: #97021d;
     --placement: #02379c;
     --big-image: url(resources/robert-metz-5e4hMnyy0tw-unsplash.jpg);
@@ -168,7 +168,7 @@ main {
 }
 
 .main {
-    width: min(90em, 100vw);
+    width: min(90em, 100%);
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -179,14 +179,10 @@ main {
     margin: 0;
 }
 
-.about {
-    padding: 0 var(--side-margins);
-}
-
 .things-title {
     padding: 3em;
     border-radius: 2em;
-    margin: 0 var(--side-margins) var(--side-margins) var(--side-margins);
+    margin: 5em var(--side-margins) var(--side-margins) var(--side-margins);
     background-color: var(--middle-color);
 }
 
@@ -206,6 +202,10 @@ main {
 .things-subtitle > h2 {
     margin: 0;
     padding: 0;
+}
+
+#about {
+    background: linear-gradient(to right, var(--hightlight-color), var(--middle-color), var(--middle-color));
 }
 
 #work {
@@ -343,35 +343,38 @@ footer {
     height: 30vh;
     flex-wrap: nowrap;
     align-items: center;
-    margin: 2em 0;
+    margin: 2em var(--side-margins);
 }
 
 .about-headshot {
-    max-height: 30vh;
+    background-image: url("resources/about-headshot.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
     border-radius: 2em;
+    flex: 1;
 }
 
 .about-text {
-    flex: 2;
+    flex: 3;
     margin: 1em;
     padding: 2em;
-    height: max-content;
     border-radius: 2em;
     background-color: var(--middle-color);
 }
 
-footer a, .about a {
+footer a, .about-text a {
     text-decoration: underline;
     color: var(--inverse-foreground-color);
     transition: color 0.3s;
 }
 
-footer a:hover, .about a:hover {
+footer a:hover, .about-text a:hover {
     color: var(--hightlight-color);
 }
 
 #about-title {
-    font-size: 7vh;
+    font-size: 4em;
     line-break: anywhere;
 }
 
@@ -415,7 +418,11 @@ a {
     }
 
     .fullspan-text {
-        width: 95vw;
+        width: 90vw;
+    }
+
+    .fullspan-text > h3 {
+        font-size: 1em;
     }
 
     .expanding-image::before {
@@ -446,12 +453,29 @@ a {
         font-size: 2vh;
     }
 
+    #about-title {
+        font-size: 2.5em;
+    }
+
     .about-box {
         flex-direction: column;
+        height: unset;
+        margin: 0 var(--side-margins);
+    }
+
+    .about-box > * {
+        margin: 1em 0;
+    }
+
+    .about-headshot {
+        flex: unset;
+        width: 100%;
+        height: 40vh;
+        margin: 0;
     }
 
     .about-text > h3 {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .about h1 {
