@@ -1,12 +1,21 @@
+@font-face {
+    font-family: 'Geist';
+    src: url(resources/GeistVariableVF.woff2) format('woff2');
+}
+
 :root {
     --background-color: #222222;
     --middle-color: rgba(3, 57, 58,0.8);
     --foreground-color: lightgrey;
     --hightlight-color: #7FFFD4;
-    --big-image: url(images/robert-metz-5e4hMnyy0tw-unsplash.jpg);
-    --primary-font: 'Inter', sans-serif;
-    --secondary-font: 'Roboto', sans-serif;
+    --novatech: #97021d;
+    --placement: #02379c;
+    --big-image: url(resources/robert-metz-5e4hMnyy0tw-unsplash.jpg);
+    --primary-font: 'Geist', sans-serif;
+    --secondary-font: 'Geist', sans-serif;
     --monospace-font: 'JetBrains Mono', monospace;
+
+    --side-margins: 2em;
 }
 
 @media (prefers-color-scheme: light) {
@@ -16,10 +25,9 @@
         --foreground-color: #222222;
         --inverse-foreground-color: whitesmoke;
         --hightlight-color: #00665e;
-        --big-image: url(images/cristian-s-W1fZKMIlkpM-unsplash.jpg);
-        --primary-font: 'Inter', sans-serif;
-        --secondary-font: 'Roboto', sans-serif;
-        --monospace-font: 'JetBrains Mono', monospace;
+        --novatech: #f18195;
+        --placement: #699eff;
+        --big-image: url(resources/cristian-s-W1fZKMIlkpM-unsplash.jpg);
     }
 }
 
@@ -101,15 +109,41 @@ main {
     padding: 0;
 }
 
-.fullspan-image {
+.image-background {
     height: 100vh;
+    position: relative;
+    transition: opacity 500ms 1000ms ease-in;
+}
+
+.expanding-image::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0; /* Cover the full size of the parent */
     background-image: var(--big-image);
+    border-radius: 2em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100vw 100vh;
+    z-index: -1; /* Put it behind the other content */
+}
+
+.expanding-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    transition: opacity 1s ease;
+    transition: height 750ms ease-out, width 750ms ease-out, opacity 250ms 500ms ease-in;
     opacity: 0;
+}
+
+.expanded {
+    opacity: 1; !important;
+    width: calc(100% - var(--side-margins)); !important;
+    height: calc(100% - var(--side-margins)); !important;
 }
 
 .fullspan-text {
@@ -118,7 +152,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw;
+    width: max-content;
 }
 
 .fullspan-navbar {
@@ -133,19 +167,27 @@ main {
     padding: 0 1em;
 }
 
-
+.main {
+    width: min(90em, 100vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
 
 #fullspan-name {
     transition: opacity 0.3s ease;
     margin: 0;
 }
 
-.footer {
-    padding: 5vh 5vh 2.5vh 5vh;
+.about {
+    padding: 0 var(--side-margins);
 }
 
 .things-title {
-    padding: 5vh 5vh 1vh 5vh;
+    padding: 3em;
+    border-radius: 2em;
+    margin: 0 var(--side-margins) var(--side-margins) var(--side-margins);
+    background-color: var(--middle-color);
 }
 
 .things-title > h1 {
@@ -154,24 +196,44 @@ main {
 }
 
 .things-subtitle {
-    padding-left: 5vh;
+    padding: 3em;
+    border-radius: 2em;
+    margin: 0 var(--side-margins) var(--side-margins) var(--side-margins);
+    background: var(--middle-color);
     scroll-margin-top: 14vh;
+}
+
+.things-subtitle > h2 {
+    margin: 0;
+    padding: 0;
+}
+
+#work {
+    background: linear-gradient(to right, var(--novatech), var(--middle-color), var(--middle-color));
+}
+
+#placement {
+    background: linear-gradient(to right, var(--placement), var(--middle-color), var(--middle-color));
 }
 
 .things-gallery {
     display: flex;
     flex-wrap: wrap;
-    margin: 2vh;
+    margin: var(--side-margins);
 }
 
 .things-gallery > * {
     display: flex;
-    width: 33%;
-    margin: 1px;
+    width: calc((1/3*100%) - 0.99999em);
+    margin: 0 1em 1em 0;
     height: 40vh;
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.things-gallery > .double-width {
+    width: calc((2/3*100%) - 0.99999em);
 }
 
 .things-gallery >  .thing-clickable:active {
@@ -188,7 +250,7 @@ main {
     background-color: #222222;
     color: lightgrey;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,1);
-    border-radius: 1vh;
+    border-radius: 1em;
     transition: all 100ms ease-in;
 }
 
@@ -197,7 +259,7 @@ main {
 }
 
 .things-gallery > * {
-    border-radius: 5px;
+    border-radius: 2em;
 }
 
 .thing-div-blank {
@@ -205,19 +267,19 @@ main {
 }
 
 #thing-div-podcastscrobbler {
-    background-image: url(/images/podcastScrobbler.webp);
+    background-image: url(/resources/podcastScrobbler.webp);
     background-size: cover;
     background-position: center;
 }
 
 #thing-div-podcastscrobblerdissertation {
-    background-image: url(/images/podcastScrobblerDissertation.webp);
+    background-image: url(/resources/podcastScrobblerDissertation.webp);
     background-size: cover;
     background-position: center;
 }
 
 #thing-div-labhack {
-    background-image: url(/images/thing-labhack.jpg);
+    background-image: url(/resources/thing-labhack.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -227,12 +289,12 @@ main {
 }
 
 #thing-div-f1ssi0n {
-    background-image: url(/images/thing-f1ssi0n.png);
+    background-image: url(/resources/thing-f1ssi0n.png);
     background-size: cover;
 }
 
 #thing-div-wordcounter {
-    background-image: url(/images/thing-wordcounter.png);
+    background-image: url(/resources/thing-wordcounter.png);
     background-size: cover;
 }
 
@@ -243,22 +305,22 @@ main {
 }
 
 #thing-div-crystal {
-    background-image: url(/images/thing-crystal.png);
+    background-image: url(/resources/thing-crystal.png);
     background-size: cover;
 }
 
 #thing-div-xmobile {
-    background-image: url(/images/thing-xmobile.png);
+    background-image: url(/resources/thing-xmobile.png);
     background-size: cover;
 }
 
 #thing-div-overflowwatchface {
-    background-image: url(/images/thing-overflowwatchface.png);
+    background-image: url(/resources/thing-overflowwatchface.png);
     background-size: cover;
 }
 
 #thing-div-macciestimetable {
-    background-image: url(/images/thing-macciestimetable.png);
+    background-image: url(/resources/thing-macciestimetable.png);
     background-size: cover;
 }
 
@@ -268,45 +330,55 @@ main {
     box-shadow: 0px 4px 14px 0px lightgrey;
 }
 
-.footer {
+footer {
     background-color: var(--middle-color);
     color: var(--inverse-foreground-color);
-    scroll-margin-top: 10vh;
+    bottom: 0;
+    margin: 0;
+    padding: 3em var(--side-margins);
 }
 
-.footer-box {
+.about-box {
     display: flex;
+    height: 30vh;
     flex-wrap: nowrap;
     align-items: center;
     margin: 2em 0;
 }
 
-.footer-headshot {
+.about-headshot {
     max-height: 30vh;
-    border-radius: 5px;
+    border-radius: 2em;
 }
 
-.footer-text {
-    margin: 0 3em;
+.about-text {
+    flex: 2;
+    margin: 1em;
+    padding: 2em;
+    height: max-content;
+    border-radius: 2em;
+    background-color: var(--middle-color);
 }
 
-.footer h1 {
-    margin: 0;
-}
-
-.footer a {
+footer a, .about a {
     text-decoration: underline;
     color: var(--inverse-foreground-color);
     transition: color 0.3s;
 }
 
-.footer a:hover {
+footer a:hover, .about a:hover {
     color: var(--hightlight-color);
+}
+
+#about-title {
+    font-size: 7vh;
+    line-break: anywhere;
 }
 
 h1 {
     font-family: var(--primary-font);
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: -0.05em;
     font-size: 10vh;
 }
 
@@ -330,6 +402,10 @@ a {
 }
 
 @media (orientation: portrait) {
+    :root {
+        --side-margins: 1em;
+    }
+
     .navbar {
         flex-direction: row-reverse;
     }
@@ -342,9 +418,27 @@ a {
         width: 95vw;
     }
 
+    .expanding-image::before {
+        background-size: auto;
+    }
+
+    .expanded {
+        width: calc(100% - 2em); !important;
+        height: calc(100% - 2em); !important;
+    }
+
+    .things-subtitle > h2 {
+        font-size: 2em;
+    }
+
     .things-gallery > * {
         width: 100%;
+        margin: 0 0 var(--side-margins) 0;
         height: 25vh;
+    }
+
+    .things-gallery > .double-width {
+        width: 100%;
     }
 
     .things-gallery > * > * > h3 {
@@ -352,12 +446,20 @@ a {
         font-size: 2vh;
     }
 
-    .footer-box {
+    .about-box {
         flex-direction: column;
     }
 
-    .footer-text {
+    .about-text > h3 {
+        font-size: 0.8em;
+    }
+
+    .about h1 {
+        background-color: var(--background-color);
+        color: var(--middle-color);
         margin: 0;
+        font-weight: 400;
+        font-size: 3em;
     }
 
     h1 {
