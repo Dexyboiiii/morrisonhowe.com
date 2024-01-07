@@ -20,6 +20,12 @@
     <h3 class="navbar-title" id="navbar-title-link"><a onclick="scrollToTop()">Johnny Morrison-Howe</a></h3>
     <ul class="navbar-list">
         <li class="navbar-option">
+            <a class="navbar-link" onclick="goToAbout()" title="About">
+                <img class="navbar-icon" src="resources/person-white-18dp.svg" alt="About">
+                <p class="navbar-link-text">About</p>
+            </a>
+        </li>
+        <li class="navbar-option">
             <a class="navbar-link" onclick="goToPlacement()" title="Work">
                 <img class="navbar-icon" src="resources/briefcase.svg" alt="Projects">
                 <p class="navbar-link-text">Work</p>
@@ -29,12 +35,6 @@
             <a class="navbar-link" onclick="goToThings()" title="Personal Projects">
                 <img class="navbar-icon" src="resources/category-white-18dp.svg" alt="Projects">
                 <p class="navbar-link-text">Personal Projects</p>
-            </a>
-        </li>
-        <li class="navbar-option">
-            <a class="navbar-link" onclick="goToFooter()" title="About">
-                <img class="navbar-icon" src="resources/person-white-18dp.svg" alt="About">
-                <p class="navbar-link-text">About</p>
             </a>
         </li>
         <li class="navbar-option">
@@ -59,6 +59,12 @@
             <div class="fullspan-navbar">
                 <ul class="navbar-list">
                     <li class="navbar-option">
+                        <a class="navbar-link" onclick="goToAbout()" title="About">
+                            <img class="navbar-icon" src="resources/person-white-18dp.svg" alt="About">
+                            <p class="navbar-link-text">About</p>
+                        </a>
+                    </li>
+                    <li class="navbar-option">
                         <a class="navbar-link" onclick="goToPlacement()" title="Work">
                             <img class="navbar-icon" src="resources/briefcase.svg" alt="Projects">
                             <p class="navbar-link-text">Work</p>
@@ -68,12 +74,6 @@
                         <a class="navbar-link" onclick="goToThings()" title="Projects">
                             <img class="navbar-icon" src="resources/category-white-18dp.svg" alt="Projects">
                             <p class="navbar-link-text">Projects</p>
-                        </a>
-                    </li>
-                    <li class="navbar-option">
-                        <a class="navbar-link" onclick="goToFooter()" title="About">
-                            <img class="navbar-icon" src="resources/person-white-18dp.svg" alt="About">
-                            <p class="navbar-link-text">About</p>
                         </a>
                     </li>
                     <li class="navbar-option">
@@ -175,7 +175,7 @@
         </div>
 
 
-        <div class="things-subtitle">
+        <div class="things-subtitle" id="fyp">
             <h2>Final Year Project - <em>Podcast
                 <wbr>
                 Scrobbler</em></h2>
@@ -200,7 +200,7 @@
             </a>
         </div>
 
-        <div class="things-subtitle">
+        <div class="things-subtitle" id="projects">
             <h2>Personal Projects</h2>
             <h3>Mostly created in 2020</h3>
         </div>
@@ -254,7 +254,7 @@
     </div>
 
     <footer>
-        <p style="opacity: 0.5;">morrisonhowe.com v3.2 / uses <a href="https://m3.material.io/styles/icons/overview">Material
+        <p style="opacity: 0.5;">morrisonhowe.com v4.0 / uses <a href="https://m3.material.io/styles/icons/overview">Material
             Design
             icons</a>, <a href="https://vercel.com/font">Geist</a>, <a href="https://www.jetbrains.com/lp/mono/">JetBrains
             Mono</a>

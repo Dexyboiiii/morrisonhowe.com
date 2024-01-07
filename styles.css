@@ -7,7 +7,7 @@
     --background-color: #222222;
     --middle-color: rgba(3, 57, 58,0.8);
     --foreground-color: lightgrey;
-    --hightlight-color: rgb(210, 118, 209);
+    --hightlight-color: rgb(128, 19, 136);
     --novatech: #97021d;
     --placement: #02379c;
     --big-image: url(resources/robert-metz-5e4hMnyy0tw-unsplash.jpg);
@@ -336,13 +336,13 @@ footer {
     bottom: 0;
     margin: 0;
     padding: 3em var(--side-margins);
+
 }
 
 .about-box {
     display: flex;
-    height: 30vh;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: stretch;
     margin: 2em var(--side-margins);
 }
 
@@ -350,17 +350,21 @@ footer {
     background-image: url("resources/about-headshot.jpg");
     background-size: cover;
     background-position: center;
-    height: 30vh;
     border-radius: 2em;
     flex: 1;
 }
 
 .about-text {
     flex: 3;
-    margin: 1em;
+    margin: auto auto auto 1em;
     padding: 2em;
     border-radius: 2em;
     background-color: var(--middle-color);
+}
+
+.about-text > * {
+    margin: 0;
+    padding: 0;
 }
 
 footer a, .about-text a {

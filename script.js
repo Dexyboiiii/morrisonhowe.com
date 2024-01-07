@@ -21,10 +21,8 @@ function getRandomHelloWorld() {
     return helloWorlds[Math.floor(Math.random() * helloWorlds.length)];
 }
 
-// goTo____() scroll to a specific element when activated
-
-function goToFooter() {
-    document.getElementById('footer').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+function goToAbout() {
+    document.getElementById('about').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function goToPlacement() {
@@ -32,7 +30,7 @@ function goToPlacement() {
 }
 
 function goToThings() {
-    document.getElementById('things').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    document.getElementById('fyp').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function scrollToTop() {
