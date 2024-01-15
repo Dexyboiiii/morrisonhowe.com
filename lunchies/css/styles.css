@@ -3,7 +3,7 @@
     --font-primary: 'Poppins', sans-serif;
     --accent-colour: lightgrey;
     --accent-colour-hover: rgb(238, 238, 238);
-    --highlight-colour: #00ccff;
+    --highlight-colour: #e4042c;
 }
 
 @media (orientation: landscape) {
