@@ -26,7 +26,7 @@ function goToAbout() {
 }
 
 function goToPlacement() {
-    document.getElementById('work').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    document.getElementById('work-novatech').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function goToThings() {

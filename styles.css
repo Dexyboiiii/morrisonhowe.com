@@ -8,6 +8,7 @@
     --middle-color: rgba(3, 57, 58,0.8);
     --foreground-color: lightgrey;
     --hightlight-color: rgb(128, 19, 136);
+    --ultumus: #52a833;
     --novatech: #97021d;
     --placement: #02379c;
     --big-image: url(resources/robert-metz-5e4hMnyy0tw-unsplash.jpg);
@@ -25,6 +26,7 @@
         --foreground-color: #222222;
         --inverse-foreground-color: whitesmoke;
         --hightlight-color: #00665e;
+        --ultumus: #52a833;
         --novatech: #f18195;
         --placement: #699eff;
         --big-image: url(resources/cristian-s-W1fZKMIlkpM-unsplash.jpg);
@@ -212,8 +214,12 @@ main {
     background: linear-gradient(to right, var(--hightlight-color), var(--middle-color), var(--middle-color));
 }
 
-#work {
+#work-novatech {
     background: linear-gradient(to right, var(--novatech), var(--middle-color), var(--middle-color));
+}
+
+#work-ultumus {
+    background: linear-gradient(to right, var(--ultumus), var(--middle-color), var(--middle-color));
 }
 
 #placement {
@@ -444,6 +450,10 @@ a {
 
     .things-subtitle > h2 {
         font-size: 2em;
+    }
+
+    .things-subtitle > p {
+        margin: 0;
     }
 
     .things-gallery > * {

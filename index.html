@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Johnny Morrison-Howe/UoP CS Grad/Novatech Developer/Rides Bikes">
+    <meta name="description" content="Johnny Morrison-Howe">
     <meta name="theme-color" content="#03393a">
     <meta name="darkreader" content="NO-DARKREADER-PLUGIN"/>
     <link href="styles.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body onload="runOnLoad()">
 <script src="./nodarkreader.min.js"></script>
 <nav class="navbar" id="navbar">
-    <h3 class="navbar-title" id="navbar-title-link"><a onclick="scrollToTop()">Johnny Morrison-Howe</a></h3>
+    <h3 class="navbar-title" id="navbar-title-link"><a onclick="scrollToTop()">Johnny Dexter Morrison-Howe</a></h3>
     <ul class="navbar-list">
         <li class="navbar-option">
             <a class="navbar-link" onclick="goToAbout()" title="About">
@@ -55,7 +55,7 @@
         <div class="fullspan-text">
             <h1 id="fullspan-name">Johnny Morrison-Howe</h1>
             <h3><strong>BSc (Hons) Computer Science</strong> University of Portsmouth</h3>
-            <h3><strong>Java Developer</strong> Novatech</h3>
+            <h3><strong>Java Developer</strong> Ultumus</h3>
             <div class="fullspan-navbar">
                 <ul class="navbar-list">
                     <li class="navbar-option">
@@ -99,28 +99,47 @@
                 <div class="headshot"></div>
                 <div class="about-text">
                     <h3>
-                        I'm a Software Engineer currently working as a Junior Java Developer for
-                        Novatech. In 2023 I completed my BSc (Hons) at the University of Portsmouth, achieving a 2:1.
-                        <br><br>Prior to Novatech, I completed a 14-month industrial placement for IBM UK Labs in Hursley.
-                        In my four years programming, I've worked with Java, Swing,
-                        Spring, Kotlin, Jetpack Compose, MSSQL/PostgreSQL, JavaScript, IBM CICS TS, React, HTML/CSS, Dart, Flutter,
-                        Python, Bash, Docker and Kubernetes.<br><br>
-                        When I'm not glued to a keyboard, you can occasionally find me <a
-                            href="https://www.strava.com/athletes/1166851" target="_blank" rel="noreferrer">riding
-                        trails</a> and <a href="https://www.instagram.com/dexyboiiii/" target="_blank"
-                                          rel="noreferrer">taking photos</a>.<br>
+                        I'm a London-based Software Engineer currently working as a Developer for <a href="https://www.ultumus.com" target="_blank" rel="noreferrer">Ultumus</a>, the leading provider of ETF and index data. I primarily work with Java in a serverless AWS environment.
+                        <br><br>Prior to Ultumus and moving to London, I worked for <a href="https://www.novatech.co.uk" target="_blank" rel="noreferrer">Novatech</a>, a Portsmouth-based company specialising in custom hardware and managed IT services. There I used a Swing/Wildfly/MSSQL stack as well as some web work with HTML and PHP.
+                        <br><br>Portsmouth was also the university where I studied Computer Science. I wrote a Kotlin-based Android application for podcast scrobbling, completed a 14-month industrial placement with IBM, and landed a 2:1.<br><br>
+                        I've always been a keen mountain biker, and while living in Portsmouth I spent many Sundays volunteering with the QECP Trail Collective, helping to maintain and improve the trails in the area. Moving to London has made mountain biking significantly less convenient, but has allowed more time for the amateur DJ in me to flourish... I suppose I'm into both forests and jungle :)<br>
                     </h3>
                 </div>
 
         </div>
 
         <div class="things-title">
-            <h1>Things I've made</h1>
+            <h1>Things I've made, where I've been</h1>
         </div>
 
-        <div class="things-subtitle" id="work">
-            <h2>For <em>Novatech</em></h2>
-            <h3>Most projects are maintenance and additions to Unity, our CRM-turned-everything-app on a Swing/Wildfly/MSSQL stack. At this point it almost handles every business function (and it will not stop growing until it does). I also work on two sister stacks, one with a HTML/PHP frontend for client-facing websites, and one exposing an API for client applications. Below are a few highlights:</h3>
+        <div class="things-subtitle" id="work-ultumus">
+            <h2>Ultumus</h2>
+            <p>APR 2025 -</p>
+            <h3>Ongoing maintenance, Index and ETF builds, and new features. Java and AWS, using mostly Lambdas and DynamoDB. Data normalisation at an enormous scale, with tens of thousands of funds and indices passing through 24/7. All different kinds of data formats in, uniform JSON out.</h3>
+        </div>
+
+        <div class="things-gallery">
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Creation of Index and ETF builds, where the configurations are added to bring in data from various providers and methods and stage it for processing.</h3>
+                </div>
+            </a>
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Executed the new Ultumus brand identity on two internally facing UIs and externally facing API documentation, adhering to new brand colours and fonts.</h3>
+                </div>
+            </a>
+            <a class="thing-div-blank" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Historical NAV import, an ongoing project majority owned by me. Lightweight batch processing of header level ETF data aiming to stage daily datapoints dating back to 2000 in under a minute.</h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="things-subtitle" id="work-novatech">
+            <h2>Novatech</h2>
+            <p>FEB 2023 - MAR 2025</p>
+            <h3>Most projects were maintenance and additions to Unity, our CRM-turned-everything-app on a Swing/Wildfly/MSSQL stack. At this point it almost handles every business function (and it will not stop growing until it does). I also worked on two sister stacks, one with a HTML/PHP frontend for client-facing websites, and one exposing an API for client applications. Below are a few highlights:</h3>
         </div>
 
         <div class="things-gallery">
@@ -131,7 +150,7 @@
             </a>
             <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
-                    <h3>Consulted, designed and built a system to digitise internal paper Purchase Orders, with manager authorisation and notification capabilities.</h3>
+                    <h3>Consulted, designed, and built a system to digitise internal paper Purchase Orders, with manager authorisation and notification capabilities.</h3>
                 </div>
             </a>
             <a class="thing-div-blank" target="_blank" rel="noreferrer">
@@ -142,28 +161,29 @@
             <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
                     <h3>
-                        Designed and built a self-serve client-facing dynamic reporting feature. Written with Mustache, PHP, Java on Dropwizard and MSSQL, time previously spent manually running queries and passing round reports by email is freed up.
+                        Designed and built a self-serve client-facing dynamic reporting feature. Written with Mustache, PHP, Java on Dropwizard, and MSSQL, time previously spent manually running queries and passing round reports by email is freed up.
                     </h3>
                 </div>
             </a>
             <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
                     <h3>
-                        Miscellaneous administration/automation tools in Unity, regarding things like users, reports, roles and audit logging. These save the time and ickyness of writing raw SQL queries to make certain user changes, or add user action traceability to actions across our internal software.
+                        Miscellaneous administration/automation tools in Unity, regarding things like users, reports, roles, and audit logging. These save the time and ickyness of writing raw SQL queries to make certain user changes, or add user action traceability to actions across our internal software.
                     </h3>
                 </div>
             </a>
         </div>
 
         <div class="things-subtitle" id="placement">
-            <h2>For <em>IBM UK Labs Hursley</em></h2>
+            <h2>IBM UK Labs</h2>
+            <p>JUL 2021 - AUG 2022</p>
         </div>
 
         <div class="things-gallery">
             <a class="thing-div-blank" target="_blank" rel="noreferrer">
                 <div>
-                    <h3>Designed and built the React.js UI, Express.js API and mongodb database for a timer tracking
-                        startups for IBM Liberty. Includes graphing capabilities, statistical analysis and detailed run
+                    <h3>Designed and built the React.js UI, Express.js API, and mongodb database for a timer tracking
+                        startups for IBM Liberty. Includes graphing capabilities, statistical analysis, and detailed run
                         times</h3>
                 </div>
             </a>
@@ -171,11 +191,6 @@
                 <div>
                     <h3>Created a Java/Spring based web frontend for CICS Banking Sample Application, demonstrating the
                         use of z/OS Connect EE</h3>
-                </div>
-            </a>
-            <a class="thing-div-blank" target="_blank" rel="noreferrer">
-                <div>
-                    <h3>Configured and deployed an instance of ReportPortal on an internal Kubernetes cluster</h3>
                 </div>
             </a>
             <a id="thing-div-labhack" href="/images/thing-labhack.jpg" target="_blank" rel="noreferrer">
@@ -268,7 +283,7 @@
     </div>
 
     <footer>
-        <p style="opacity: 0.5;">morrisonhowe.com v4.1 / uses <a href="https://m3.material.io/styles/icons/overview">Material
+        <p style="opacity: 0.5;">morrisonhowe.com v4.2 / uses <a href="https://m3.material.io/styles/icons/overview">Material
             Design
             icons</a>, <a href="https://vercel.com/font">Geist</a>, <a href="https://www.jetbrains.com/lp/mono/">JetBrains
             Mono</a>
